@@ -1,0 +1,58 @@
+{
+  "mappings": {
+    "club/Livid/client/mixin/impl/MixinMinecraft": {
+      "createDisplay": "Lave;ap()V",
+      "startGame": "Lave;am()V"
+    },
+    "club/Livid/client/mixin/impl/MixinGuiIngame": {
+      "renderGameOverlay": "Lavo;a(F)V"
+    },
+    "club/Livid/client/mixin/impl/MixinEntityRenderer": {
+      "renderHand": "Lbfk;b(FI)V"
+    },
+    "club/Livid/client/mixin/impl/MixinEntityPlayerSP": {
+      "onUpdate": "Lbew;t_()V"
+    },
+    "club/Livid/client/mixin/impl/MixinGuiMainMenu": {
+      "drawScreen": "Laya;a(IIF)V"
+    }
+  },
+  "data": {
+    "notch": {
+      "club/Livid/client/mixin/impl/MixinMinecraft": {
+        "createDisplay": "Lave;ap()V",
+        "startGame": "Lave;am()V"
+      },
+      "club/Livid/client/mixin/impl/MixinGuiIngame": {
+        "renderGameOverlay": "Lavo;a(F)V"
+      },
+      "club/Livid/client/mixin/impl/MixinEntityRenderer": {
+        "renderHand": "Lbfk;b(FI)V"
+      },
+      "club/Livid/client/mixin/impl/MixinEntityPlayerSP": {
+        "onUpdate": "Lbew;t_()V"
+      },
+      "club/Livid/client/mixin/impl/MixinGuiMainMenu": {
+        "drawScreen": "Laya;a(IIF)V"
+      }
+    },
+    "searge": {
+      "club/Livid/client/mixin/impl/MixinMinecraft": {
+        "createDisplay": "Lnet/minecraft/client/Minecraft;func_175609_am()V",
+        "startGame": "Lnet/minecraft/client/Minecraft;func_71384_a()V"
+      },
+      "club/Livid/client/mixin/impl/MixinGuiIngame": {
+        "renderGameOverlay": "Lnet/minecraft/client/gui/GuiIngame;func_175180_a(F)V"
+      },
+      "club/Livid/client/mixin/impl/MixinEntityRenderer": {
+        "renderHand": "Lnet/minecraft/client/renderer/EntityRenderer;func_78476_b(FI)V"
+      },
+      "club/Livid/client/mixin/impl/MixinEntityPlayerSP": {
+        "onUpdate": "Lnet/minecraft/client/entity/EntityPlayerSP;func_70071_h_()V"
+      },
+      "club/Livid/client/mixin/impl/MixinGuiMainMenu": {
+        "drawScreen": "Lnet/minecraft/client/gui/GuiMainMenu;func_73863_a(IIF)V"
+      }
+    }
+  }
+}
