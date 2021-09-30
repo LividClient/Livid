@@ -1,6 +1,7 @@
 package club.Livid.client.ui;
 
 import club.Livid.client.utilities.FontRenderer.CFont;
+import club.Livid.client.utilities.render.RenderUtil;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.texture.DynamicTexture;
@@ -18,7 +19,7 @@ import static org.lwjgl.opengl.GL11.*;
 public class LividMainMenuExpandComponent extends LividUIComponent {
 
     private boolean expanded;
-    int size;
+    float size;
 
     /**
      * things
@@ -26,7 +27,7 @@ public class LividMainMenuExpandComponent extends LividUIComponent {
 
     float sizeDifference;
 
-    public LividMainMenuExpandComponent(int id, int x, int y, LividUIComponent parentComponent, int size, LividUIComponent... children) {
+    public LividMainMenuExpandComponent(int id, int x, int y, LividUIComponent parentComponent, float size, LividUIComponent... children) {
         super(id, x, y, parentComponent, children);
         this.size = size;
     }
@@ -52,14 +53,9 @@ public class LividMainMenuExpandComponent extends LividUIComponent {
 
     @Override
     public void draw(int mouseX, int mouseY) {
-        GL11.glPushMatrix();
         ResourceLocation r = new ResourceLocation("Livid/main.png");
         mc.getTextureManager().bindTexture(r);
-        sizeDifference += ((isHovered(mouseX, mouseY) ? 1 : 0) - sizeDifference) / 4;
-        GlStateManager.enableAlpha();
-        GlStateManager.enableBlend();
-        GL11.glEnable(GL11.GL_BLEND);
-        Gui.drawModalRectWithCustomSizedTexture((int)(getX() - size - sizeDifference), (int)(getY() - sizeDifference - size), 0, 0, (int)(size * 2 + sizeDifference * 2), (int)(size * 2 + sizeDifference * 2), size * 2 + sizeDifference * 2, size * 2 + sizeDifference * 2);
-        GL11.glPopMatrix();
+        sizeDifference += ((isHovered(mouseX, mouseY) ? 1f : 0f) - sizeDifference) / 4f;
+        RenderUtil.antialiasImageDraw((getX() - size - sizeDifference), (getY() - sizeDifference - size), 0f, 0f, (size * 2f + sizeDifference * 2f), (size * 2f + sizeDifference * 2f), size * 2f + sizeDifference * 2f, size * 2f + sizeDifference * 2f);
     }
 }

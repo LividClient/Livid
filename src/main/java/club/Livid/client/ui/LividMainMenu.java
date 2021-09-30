@@ -20,21 +20,23 @@ import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.opengl.GL30.*;
 
 public class LividMainMenu extends GuiScreen {
+
+    private final ResourceLocation background = new ResourceLocation("Livid/bg.png");
+
     private ArrayList<LividUIComponent> components = new ArrayList<>();
 
     @Override
     public void drawScreen(int mouseX, int mouseY, float partialTicks) {
-        GlStateManager.pushMatrix();
         ScaledResolution sr = new ScaledResolution(mc);
-        ResourceLocation background = new ResourceLocation("Livid/bg.png");
         mc.getTextureManager().bindTexture(background);
         Gui.drawModalRectWithCustomSizedTexture(0, 0, 0, 0, sr.getScaledWidth(), sr.getScaledHeight(), sr.getScaledWidth(), sr.getScaledHeight());
         for (LividUIComponent c : components) {
-            c.draw(mouseX, mouseY);
+            GL11.glEnable(GL_BLEND);
+            GL11.glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
             c.setX(sr.getScaledWidth() / 2);
             c.setY(sr.getScaledHeight() / 2);
+            c.draw(mouseX, mouseY);
         }
-        GlStateManager.popMatrix();
         super.drawScreen(mouseX, mouseY, partialTicks);
     }
 
@@ -45,27 +47,11 @@ public class LividMainMenu extends GuiScreen {
                 ScaledResolution sr = new ScaledResolution(mc);
                 c.setX(sr.getScaledWidth() / 2);
                 c.setY(sr.getScaledHeight() / 2);
-                triangle(2);
             }
         }
         super.onResize(mcIn, w, h);
     }
 
-    public void triangle(int rows){
-        System.out.println("--------------------");
-        for (int i = 1; i <= rows; i++) {
-
-            for (int c = i; c <= rows; c++) {
-                System.out.print(" ");
-            }
-
-            for (int c = 1; c <= i; c++) {
-                System.out.print(" *");
-            }
-            System.out.println(" ");
-        }
-        System.out.println("--------------------");
-    }
 
     @Override
     protected void keyTyped(char typedChar, int keyCode) throws IOException {
