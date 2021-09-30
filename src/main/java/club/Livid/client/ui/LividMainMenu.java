@@ -1,5 +1,6 @@
 package club.Livid.client.ui;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
@@ -29,12 +30,41 @@ public class LividMainMenu extends GuiScreen {
         mc.getTextureManager().bindTexture(background);
         Gui.drawModalRectWithCustomSizedTexture(0, 0, 0, 0, sr.getScaledWidth(), sr.getScaledHeight(), sr.getScaledWidth(), sr.getScaledHeight());
         for (LividUIComponent c : components) {
+            c.draw(mouseX, mouseY);
             c.setX(sr.getScaledWidth() / 2);
             c.setY(sr.getScaledHeight() / 2);
-            c.draw(mouseX, mouseY);
         }
         GlStateManager.popMatrix();
         super.drawScreen(mouseX, mouseY, partialTicks);
+    }
+
+    @Override
+    public void onResize(Minecraft mcIn, int w, int h) {
+        for (LividUIComponent c : components) {
+            if(c instanceof LividMainMenuExpandComponent){
+                ScaledResolution sr = new ScaledResolution(mc);
+                c.setX(sr.getScaledWidth() / 2);
+                c.setY(sr.getScaledHeight() / 2);
+                triangle(2);
+            }
+        }
+        super.onResize(mcIn, w, h);
+    }
+
+    public void triangle(int rows){
+        System.out.println("--------------------");
+        for (int i = 1; i <= rows; i++) {
+
+            for (int c = i; c <= rows; c++) {
+                System.out.print(" ");
+            }
+
+            for (int c = 1; c <= i; c++) {
+                System.out.print(" *");
+            }
+            System.out.println(" ");
+        }
+        System.out.println("--------------------");
     }
 
     @Override
@@ -63,7 +93,8 @@ public class LividMainMenu extends GuiScreen {
     @Override
     public void initGui() {
         this.components.clear();
-        this.components.add(new LividMainMenuExpandComponent(0, mc.displayWidth / 2, mc.displayHeight / 2, null, 30));
+        ScaledResolution sr = new ScaledResolution(mc);
+        this.components.add(new LividMainMenuExpandComponent(0, sr.getScaledWidth() / 2, sr.getScaledHeight() / 2, null, 30));
         super.initGui();
     }
 

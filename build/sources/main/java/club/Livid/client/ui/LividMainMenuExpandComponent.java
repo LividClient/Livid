@@ -55,11 +55,11 @@ public class LividMainMenuExpandComponent extends LividUIComponent {
         GL11.glPushMatrix();
         ResourceLocation r = new ResourceLocation("Livid/main.png");
         mc.getTextureManager().bindTexture(r);
-        sizeDifference += ((isHovered(mouseX, mouseY) ? 4 : 0) - sizeDifference) / 4;
+        sizeDifference += ((isHovered(mouseX, mouseY) ? 1 : 0) - sizeDifference) / 4;
         GlStateManager.enableAlpha();
         GlStateManager.enableBlend();
         GL11.glEnable(GL11.GL_BLEND);
-        Gui.drawModalRectWithCustomSizedTexture(getX() - size - (int)sizeDifference * 2, getY() - size - (int)sizeDifference * 2, 0, 0, (int) (size + sizeDifference * 2) * 2, (int) (size + sizeDifference * 2) * 2, (size + sizeDifference * 2) * 2, (size + sizeDifference * 2) * 2);
+        Gui.drawModalRectWithCustomSizedTexture((int)(getX() - size - sizeDifference), (int)(getY() - sizeDifference - size), 0, 0, (int)(size * 2 + sizeDifference * 2), (int)(size * 2 + sizeDifference * 2), size * 2 + sizeDifference * 2, size * 2 + sizeDifference * 2);
         GL11.glPopMatrix();
     }
 }
