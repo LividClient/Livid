@@ -54,8 +54,12 @@ public class LividMainMenuExpandComponent extends LividUIComponent {
     @Override
     public void draw(int mouseX, int mouseY) {
         ResourceLocation r = new ResourceLocation("Livid/main.png");
+        sizeDifference += ((isHovered(mouseX, mouseY) ? 4f : 0f) - sizeDifference) / 4f;
+        GlStateManager.color(1.0f, 1.0f, 1.0f, 1.0f);
+        GL11.glEnable(GL_BLEND);
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+        GlStateManager.alphaFunc(516, 0.003921569F);
         mc.getTextureManager().bindTexture(r);
-        sizeDifference += ((isHovered(mouseX, mouseY) ? 1f : 0f) - sizeDifference) / 4f;
-        RenderUtil.antialiasImageDraw((getX() - size - sizeDifference), (getY() - sizeDifference - size), 0f, 0f, (size * 2f + sizeDifference * 2f), (size * 2f + sizeDifference * 2f), size * 2f + sizeDifference * 2f, size * 2f + sizeDifference * 2f);
+        RenderUtil.drawModalRectWithCustomSizedTextureF((getX() - size - sizeDifference), (getY() - size - sizeDifference), 0, 0, (size * 2f + sizeDifference * 2f), (size * 2f + sizeDifference * 2f), size * 2f + sizeDifference * 2f, size * 2f + sizeDifference * 2f);
     }
 }

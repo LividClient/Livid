@@ -1,156 +1,156 @@
-[00:42:55] [main/INFO]: Extra: [--tweakClass, club.Livid.client.mixin.LividTweaker]
-[00:42:55] [main/INFO]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/leeal/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8.9, --tweakClass, club.Livid.client.mixin.LividTweaker]
-[00:42:55] [main/INFO]: Loading tweak class name club.Livid.client.mixin.LividTweaker
-[00:42:55] [main/INFO]: Using primary tweak class name club.Livid.client.mixin.LividTweaker
-[00:42:55] [main/INFO]: Calling tweak class club.Livid.client.mixin.LividTweaker
-[00:42:55] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.7.11 Source=file:/C:/Users/leeal/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.7.11-SNAPSHOT/7a670207bdb97db418118ad1e9bb42424ff3776d/mixin-0.7.11-SNAPSHOT.jar Service=LaunchWrapper Env=UNKNOWN
-[00:42:55] [main/INFO]: FML platform manager could not load class cpw.mods.fml.relauncher.CoreModManager. Proceeding without FML support.
-[00:42:55] [main/INFO]: Compatibility level set to JAVA_8
-[00:42:55] [main/ERROR]: Mixin config mixins.livid.json does not specify "minVersion" property
-[00:42:55] [main/INFO]: Loading tweak class name org.spongepowered.asm.mixin.EnvironmentStateTweaker
-[00:42:55] [main/INFO]: Calling tweak class org.spongepowered.asm.mixin.EnvironmentStateTweaker
-[00:42:55] [main/WARN]: Reference map 'mixins.Livid.refmap.json' for mixins.livid.json could not be read. If this is a development environment you can ignore this message
-[00:42:55] [main/ERROR]: Classloader restrictions [PACKAGE_CLASSLOADER_EXCLUSION] encountered loading mixins.livid.json:MixinMinecraft, name: club.Livid.client.mixin.impl.MixinMinecraft
-[00:42:55] [main/ERROR]: Classloader restrictions [PACKAGE_CLASSLOADER_EXCLUSION] encountered loading mixins.livid.json:MixinGuiMainMenu, name: club.Livid.client.mixin.impl.MixinGuiMainMenu
-[00:42:55] [main/ERROR]: Classloader restrictions [PACKAGE_CLASSLOADER_EXCLUSION] encountered loading mixins.livid.json:MixinEntityRenderer, name: club.Livid.client.mixin.impl.MixinEntityRenderer
-[00:42:55] [main/ERROR]: Classloader restrictions [PACKAGE_CLASSLOADER_EXCLUSION] encountered loading mixins.livid.json:MixinGuiIngame, name: club.Livid.client.mixin.impl.MixinGuiIngame
-[00:42:55] [main/ERROR]: Classloader restrictions [PACKAGE_CLASSLOADER_EXCLUSION] encountered loading mixins.livid.json:MixinFontRenderer, name: club.Livid.client.mixin.impl.MixinFontRenderer
-[00:42:55] [main/ERROR]: Classloader restrictions [PACKAGE_CLASSLOADER_EXCLUSION] encountered loading mixins.livid.json:MixinGuiButton, name: club.Livid.client.mixin.impl.MixinGuiButton
-[00:42:55] [main/ERROR]: Classloader restrictions [PACKAGE_CLASSLOADER_EXCLUSION] encountered loading mixins.livid.json:MixinEntityPlayerSP, name: club.Livid.client.mixin.impl.MixinEntityPlayerSP
-[00:42:55] [main/INFO]: Launching wrapped minecraft {net.minecraft.client.main.Main}
-[00:42:55] [main/INFO]: Mixing MixinMinecraft from mixins.livid.json into net.minecraft.client.Minecraft
-[00:42:55] [main/INFO]: Mixing MixinGuiMainMenu from mixins.livid.json into net.minecraft.client.gui.GuiMainMenu
-[00:42:55] [main/INFO]: Mixing MixinEntityPlayerSP from mixins.livid.json into net.minecraft.client.entity.EntityPlayerSP
-[00:42:57] [Client thread/INFO]: Setting user: Player510
-[00:42:57] [Client thread/INFO]: (Session ID is token:FML:Player510)
-[00:42:58] [Client thread/INFO]: [OptiFine] *** Reflector Forge ***
-[00:42:58] [Client thread/INFO]: Mixing MixinEntityRenderer from mixins.livid.json into net.minecraft.client.renderer.EntityRenderer
-[00:42:58] [Client thread/INFO]: [OptiFine] *** Reflector Vanilla ***
-[00:42:58] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.common.eventhandler.Event$Result
-[00:42:58] [Client thread/INFO]: LWJGL Version: 2.9.3
-[00:42:59] [Client thread/INFO]: [OptiFine] 
-[00:42:59] [Client thread/INFO]: [OptiFine] OptiFine_1.8.9_HD_U_M5
-[00:42:59] [Client thread/INFO]: [OptiFine] Build: null
-[00:42:59] [Client thread/INFO]: [OptiFine] OS: Windows 10 (amd64) version 10.0
-[00:42:59] [Client thread/INFO]: [OptiFine] Java: 1.8.0_301, Oracle Corporation
-[00:42:59] [Client thread/INFO]: [OptiFine] VM: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
-[00:42:59] [Client thread/INFO]: [OptiFine] LWJGL: 2.9.3
-[00:42:59] [Client thread/INFO]: [OptiFine] OpenGL: Intel(R) UHD Graphics 630, version 4.6.0 - Build 27.20.100.9664, Intel
-[00:42:59] [Client thread/INFO]: [OptiFine] OpenGL Version: 4.6.0
-[00:42:59] [Client thread/INFO]: [OptiFine] OpenGL Fancy fog: Not available (GL_NV_fog_distance)
-[00:42:59] [Client thread/INFO]: [OptiFine] Maximum texture size: 16384x16384
-[00:42:59] [Client thread/INFO]: [OptiFine] FSAA Samples: 2
-[00:42:59] [VersionCheck/INFO]: [OptiFine] Checking for new version
-[00:42:59] [Client thread/INFO]: Mixing MixinFontRenderer from mixins.livid.json into net.minecraft.client.gui.FontRenderer
-[00:42:59] [Client thread/INFO]: Mixing MixinGuiIngame from mixins.livid.json into net.minecraft.client.gui.GuiIngame
-[00:42:59] [VersionCheck/INFO]: [OptiFine] Version found: M5
-[00:42:59] [Client thread/INFO]: [Shaders] OpenGL Version: 4.6.0 - Build 27.20.100.9664
-[00:42:59] [Client thread/INFO]: [Shaders] Vendor:  Intel
-[00:42:59] [Client thread/INFO]: [Shaders] Renderer: Intel(R) UHD Graphics 630
-[00:42:59] [Client thread/INFO]: [Shaders] Capabilities:  2.0  2.1  3.0  3.2  4.0 
-[00:42:59] [Client thread/INFO]: [Shaders] GL_MAX_DRAW_BUFFERS: 8
-[00:42:59] [Client thread/INFO]: [Shaders] GL_MAX_COLOR_ATTACHMENTS_EXT: 8
-[00:42:59] [Client thread/INFO]: [Shaders] GL_MAX_TEXTURE_IMAGE_UNITS: 32
-[00:42:59] [Client thread/INFO]: [Shaders] Load shaders configuration.
-[00:42:59] [Client thread/INFO]: [Shaders] Shaders can not be loaded, Antialiasing is enabled: 2x
-[00:42:59] [Client thread/INFO]: [Shaders] No shaderpack loaded.
-[00:42:59] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.common.Loader
-[00:42:59] [Client thread/INFO]: Reloading ResourceManager: Default
-[00:42:59] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: optifine.OptiFineClassTransformer
-[00:42:59] [Client thread/INFO]: [OptiFine] *** Reloading textures ***
-[00:42:59] [Client thread/INFO]: [OptiFine] Resource packs: Default
-[00:42:59] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.client.SplashProgress
-[00:42:59] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.model.Attributes
-[00:42:59] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.client.renderer.vertex.VertexFormatElement$EnumUsage.preDraw
-[00:42:59] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.client.renderer.vertex.VertexFormatElement$EnumUsage.postDraw
-[00:43:00] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[00:43:00] [Thread-7/INFO]: Initializing LWJGL OpenAL
-[00:43:00] [Thread-7/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[00:43:00] [Thread-7/INFO]: OpenAL initialized.
-[00:43:00] [Sound Library Loader/INFO]: Sound engine started
-[00:43:01] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.ForgeHooksClient
-[00:43:01] [Client thread/INFO]: [OptiFine] Multitexture: true
-[00:43:01] [Client thread/INFO]: [OptiFine] BetterGrass: Parsing default configuration optifine/bettergrass.properties
-[00:43:02] [Client thread/INFO]: Created: 512x512 textures-atlas
-[00:43:02] [Client thread/INFO]: [OptiFine] Animated sprites: 11
-[00:43:02] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.model.ModelLoader
-[00:43:02] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.ItemModelMesherForge
-[00:43:02] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.client.registry.RenderingRegistry
-[00:43:02] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.ForgeModContainer
-[00:43:02] [Client thread/INFO]: Mixing MixinGuiButton from mixins.livid.json into net.minecraft.client.gui.GuiButton
-[00:43:02] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.client.GuiModList
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: mods.betterfoliage.client.BetterFoliageClient
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.common.asm.transformers.BlamingTransformer
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.event.world.ChunkWatchEvent$UnWatch
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.relauncher.CoreModManager
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.DimensionManager
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.GuiScreenEvent$DrawScreenEvent$Pre
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.GuiScreenEvent$DrawScreenEvent$Post
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.EntityViewRenderEvent$CameraSetup
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.EntityViewRenderEvent$FogColors
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.common.eventhandler.Event
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.common.eventhandler.EventBus
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.property.ExtendedBlockState
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.client.FMLClientHandler
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.common.FMLCommonHandler
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.world.biome.BiomeGenBase.getWaterColorMultiplier
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.addDestroyEffects
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.addHitEffects
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.canCreatureSpawn
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.canRenderInLayer
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.doesSideBlockRendering
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.getBedDirection
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.getExtendedState
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.getLightOpacity
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.getLightValue
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.hasTileEntity
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.isAir
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.isBed
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.isBedFoot
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.isSideSolid
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.world.ChunkCache.isSideSolid
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.entity.Entity.canRiderInteract
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Field not present: net.minecraft.entity.Entity.captureDrops
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Field not present: net.minecraft.entity.Entity.capturedDrops
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.entity.Entity.shouldRenderInPass
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.entity.Entity.shouldRiderSit
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.event.ForgeEventFactory
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.ForgeHooks
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Field not present: net.minecraft.item.Item.delegate
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.item.Item.getDurabilityForDisplay
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.item.Item.getModel
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.item.Item.onEntitySwing
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.item.Item.shouldCauseReequipAnimation
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.item.Item.showDurabilityBar
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.potion.PotionEffect.isCurativeItem
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.tileentity.TileEntity.canRenderBreaking
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.tileentity.TileEntity.getRenderBoundingBox
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.tileentity.TileEntity.hasFastRenderer
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.tileentity.TileEntity.shouldRenderInPass
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.world.World.countEntities
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.world.World.getPerWorldStorage
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.world.WorldProvider.getCloudRenderer
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.world.WorldProvider.getSkyRenderer
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.world.WorldProvider.getWeatherRenderer
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.world.WorldProvider.getSaveFolder
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.model.IColoredBakedQuad
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.property.IExtendedBlockState
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.model.IModel
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.IRenderHandler
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.model.pipeline.LightUtil
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.MinecraftForge
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.MinecraftForgeClient
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.common.ModContainer
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.model.ModelLoader$VanillaLoader
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.RenderBlockOverlayEvent$OverlayType
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.RenderItemInFrameEvent
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.RenderLivingEvent$Pre
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.RenderLivingEvent$Post
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.RenderLivingEvent$Specials$Pre
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.RenderLivingEvent$Specials$Post
-[00:43:04] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.event.world.WorldEvent$Load
-[00:43:04] [Client thread/INFO]: [OptiFine] *** Reloading custom textures ***
-[00:43:05] [Client thread/INFO]: [OptiFine] Enable face culling: acacia_leaves, birch_leaves, dark_oak_leaves, jungle_leaves, oak_leaves, spruce_leaves
-[00:43:28] [Client thread/INFO]: Stopping!
-[00:43:28] [Client thread/INFO]: SoundSystem shutting down...
-[00:43:29] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[21:56:58] [main/INFO]: Extra: [--tweakClass, club.Livid.client.mixin.LividTweaker]
+[21:56:58] [main/INFO]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/leeal/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8.9, --tweakClass, club.Livid.client.mixin.LividTweaker]
+[21:56:58] [main/INFO]: Loading tweak class name club.Livid.client.mixin.LividTweaker
+[21:56:58] [main/INFO]: Using primary tweak class name club.Livid.client.mixin.LividTweaker
+[21:56:58] [main/INFO]: Calling tweak class club.Livid.client.mixin.LividTweaker
+[21:56:58] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.7.11 Source=file:/C:/Users/leeal/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.7.11-SNAPSHOT/7a670207bdb97db418118ad1e9bb42424ff3776d/mixin-0.7.11-SNAPSHOT.jar Service=LaunchWrapper Env=UNKNOWN
+[21:56:59] [main/INFO]: FML platform manager could not load class cpw.mods.fml.relauncher.CoreModManager. Proceeding without FML support.
+[21:56:59] [main/INFO]: Compatibility level set to JAVA_8
+[21:56:59] [main/ERROR]: Mixin config mixins.livid.json does not specify "minVersion" property
+[21:56:59] [main/INFO]: Loading tweak class name org.spongepowered.asm.mixin.EnvironmentStateTweaker
+[21:56:59] [main/INFO]: Calling tweak class org.spongepowered.asm.mixin.EnvironmentStateTweaker
+[21:56:59] [main/WARN]: Reference map 'mixins.Livid.refmap.json' for mixins.livid.json could not be read. If this is a development environment you can ignore this message
+[21:56:59] [main/ERROR]: Classloader restrictions [PACKAGE_CLASSLOADER_EXCLUSION] encountered loading mixins.livid.json:MixinMinecraft, name: club.Livid.client.mixin.impl.MixinMinecraft
+[21:56:59] [main/ERROR]: Classloader restrictions [PACKAGE_CLASSLOADER_EXCLUSION] encountered loading mixins.livid.json:MixinGuiMainMenu, name: club.Livid.client.mixin.impl.MixinGuiMainMenu
+[21:56:59] [main/ERROR]: Classloader restrictions [PACKAGE_CLASSLOADER_EXCLUSION] encountered loading mixins.livid.json:MixinEntityRenderer, name: club.Livid.client.mixin.impl.MixinEntityRenderer
+[21:56:59] [main/ERROR]: Classloader restrictions [PACKAGE_CLASSLOADER_EXCLUSION] encountered loading mixins.livid.json:MixinGuiIngame, name: club.Livid.client.mixin.impl.MixinGuiIngame
+[21:56:59] [main/ERROR]: Classloader restrictions [PACKAGE_CLASSLOADER_EXCLUSION] encountered loading mixins.livid.json:MixinFontRenderer, name: club.Livid.client.mixin.impl.MixinFontRenderer
+[21:56:59] [main/ERROR]: Classloader restrictions [PACKAGE_CLASSLOADER_EXCLUSION] encountered loading mixins.livid.json:MixinGuiButton, name: club.Livid.client.mixin.impl.MixinGuiButton
+[21:56:59] [main/ERROR]: Classloader restrictions [PACKAGE_CLASSLOADER_EXCLUSION] encountered loading mixins.livid.json:MixinEntityPlayerSP, name: club.Livid.client.mixin.impl.MixinEntityPlayerSP
+[21:56:59] [main/INFO]: Launching wrapped minecraft {net.minecraft.client.main.Main}
+[21:56:59] [main/INFO]: Mixing MixinMinecraft from mixins.livid.json into net.minecraft.client.Minecraft
+[21:56:59] [main/INFO]: Mixing MixinGuiMainMenu from mixins.livid.json into net.minecraft.client.gui.GuiMainMenu
+[21:56:59] [main/INFO]: Mixing MixinEntityPlayerSP from mixins.livid.json into net.minecraft.client.entity.EntityPlayerSP
+[21:57:01] [Client thread/INFO]: Setting user: Player330
+[21:57:01] [Client thread/INFO]: (Session ID is token:FML:Player330)
+[21:57:02] [Client thread/INFO]: [OptiFine] *** Reflector Forge ***
+[21:57:02] [Client thread/INFO]: Mixing MixinEntityRenderer from mixins.livid.json into net.minecraft.client.renderer.EntityRenderer
+[21:57:02] [Client thread/INFO]: [OptiFine] *** Reflector Vanilla ***
+[21:57:02] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.common.eventhandler.Event$Result
+[21:57:02] [Client thread/INFO]: LWJGL Version: 2.9.3
+[21:57:02] [Client thread/INFO]: [OptiFine] 
+[21:57:02] [Client thread/INFO]: [OptiFine] OptiFine_1.8.9_HD_U_M5
+[21:57:02] [Client thread/INFO]: [OptiFine] Build: null
+[21:57:02] [Client thread/INFO]: [OptiFine] OS: Windows 10 (amd64) version 10.0
+[21:57:02] [Client thread/INFO]: [OptiFine] Java: 1.8.0_301, Oracle Corporation
+[21:57:02] [Client thread/INFO]: [OptiFine] VM: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+[21:57:02] [Client thread/INFO]: [OptiFine] LWJGL: 2.9.3
+[21:57:02] [Client thread/INFO]: [OptiFine] OpenGL: Intel(R) UHD Graphics 630, version 4.6.0 - Build 27.20.100.9664, Intel
+[21:57:02] [Client thread/INFO]: [OptiFine] OpenGL Version: 4.6.0
+[21:57:02] [Client thread/INFO]: [OptiFine] OpenGL Fancy fog: Not available (GL_NV_fog_distance)
+[21:57:02] [Client thread/INFO]: [OptiFine] Maximum texture size: 16384x16384
+[21:57:02] [Client thread/INFO]: [OptiFine] FSAA Samples: 2
+[21:57:02] [VersionCheck/INFO]: [OptiFine] Checking for new version
+[21:57:03] [Client thread/INFO]: Mixing MixinFontRenderer from mixins.livid.json into net.minecraft.client.gui.FontRenderer
+[21:57:03] [Client thread/INFO]: Mixing MixinGuiIngame from mixins.livid.json into net.minecraft.client.gui.GuiIngame
+[21:57:03] [Client thread/INFO]: [Shaders] OpenGL Version: 4.6.0 - Build 27.20.100.9664
+[21:57:03] [Client thread/INFO]: [Shaders] Vendor:  Intel
+[21:57:03] [Client thread/INFO]: [Shaders] Renderer: Intel(R) UHD Graphics 630
+[21:57:03] [Client thread/INFO]: [Shaders] Capabilities:  2.0  2.1  3.0  3.2  4.0 
+[21:57:03] [Client thread/INFO]: [Shaders] GL_MAX_DRAW_BUFFERS: 8
+[21:57:03] [Client thread/INFO]: [Shaders] GL_MAX_COLOR_ATTACHMENTS_EXT: 8
+[21:57:03] [Client thread/INFO]: [Shaders] GL_MAX_TEXTURE_IMAGE_UNITS: 32
+[21:57:03] [Client thread/INFO]: [Shaders] Load shaders configuration.
+[21:57:03] [Client thread/INFO]: [Shaders] Shaders can not be loaded, Antialiasing is enabled: 2x
+[21:57:03] [Client thread/INFO]: [Shaders] No shaderpack loaded.
+[21:57:03] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.common.Loader
+[21:57:03] [VersionCheck/INFO]: [OptiFine] Version found: M5
+[21:57:03] [Client thread/INFO]: Reloading ResourceManager: Default
+[21:57:03] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: optifine.OptiFineClassTransformer
+[21:57:03] [Client thread/INFO]: [OptiFine] *** Reloading textures ***
+[21:57:03] [Client thread/INFO]: [OptiFine] Resource packs: Default
+[21:57:03] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.client.SplashProgress
+[21:57:03] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.model.Attributes
+[21:57:03] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.client.renderer.vertex.VertexFormatElement$EnumUsage.preDraw
+[21:57:03] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.client.renderer.vertex.VertexFormatElement$EnumUsage.postDraw
+[21:57:03] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[21:57:03] [Thread-7/INFO]: Initializing LWJGL OpenAL
+[21:57:03] [Thread-7/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[21:57:04] [Thread-7/INFO]: OpenAL initialized.
+[21:57:04] [Sound Library Loader/INFO]: Sound engine started
+[21:57:04] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.ForgeHooksClient
+[21:57:05] [Client thread/INFO]: [OptiFine] Multitexture: true
+[21:57:05] [Client thread/INFO]: [OptiFine] BetterGrass: Parsing default configuration optifine/bettergrass.properties
+[21:57:05] [Client thread/INFO]: Created: 512x512 textures-atlas
+[21:57:05] [Client thread/INFO]: [OptiFine] Animated sprites: 11
+[21:57:06] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.model.ModelLoader
+[21:57:06] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.ItemModelMesherForge
+[21:57:06] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.client.registry.RenderingRegistry
+[21:57:06] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.ForgeModContainer
+[21:57:06] [Client thread/INFO]: Mixing MixinGuiButton from mixins.livid.json into net.minecraft.client.gui.GuiButton
+[21:57:06] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.client.GuiModList
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: mods.betterfoliage.client.BetterFoliageClient
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.common.asm.transformers.BlamingTransformer
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.event.world.ChunkWatchEvent$UnWatch
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.relauncher.CoreModManager
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.DimensionManager
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.GuiScreenEvent$DrawScreenEvent$Pre
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.GuiScreenEvent$DrawScreenEvent$Post
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.EntityViewRenderEvent$CameraSetup
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.EntityViewRenderEvent$FogColors
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.common.eventhandler.Event
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.common.eventhandler.EventBus
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.property.ExtendedBlockState
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.client.FMLClientHandler
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.common.FMLCommonHandler
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.world.biome.BiomeGenBase.getWaterColorMultiplier
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.addDestroyEffects
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.addHitEffects
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.canCreatureSpawn
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.canRenderInLayer
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.doesSideBlockRendering
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.getBedDirection
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.getExtendedState
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.getLightOpacity
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.getLightValue
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.hasTileEntity
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.isAir
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.isBed
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.isBedFoot
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.block.Block.isSideSolid
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.world.ChunkCache.isSideSolid
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.entity.Entity.canRiderInteract
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Field not present: net.minecraft.entity.Entity.captureDrops
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Field not present: net.minecraft.entity.Entity.capturedDrops
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.entity.Entity.shouldRenderInPass
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.entity.Entity.shouldRiderSit
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.event.ForgeEventFactory
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.ForgeHooks
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Field not present: net.minecraft.item.Item.delegate
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.item.Item.getDurabilityForDisplay
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.item.Item.getModel
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.item.Item.onEntitySwing
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.item.Item.shouldCauseReequipAnimation
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.item.Item.showDurabilityBar
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.potion.PotionEffect.isCurativeItem
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.tileentity.TileEntity.canRenderBreaking
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.tileentity.TileEntity.getRenderBoundingBox
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.tileentity.TileEntity.hasFastRenderer
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.tileentity.TileEntity.shouldRenderInPass
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.world.World.countEntities
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.world.World.getPerWorldStorage
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.world.WorldProvider.getCloudRenderer
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.world.WorldProvider.getSkyRenderer
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.world.WorldProvider.getWeatherRenderer
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Method not present: net.minecraft.world.WorldProvider.getSaveFolder
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.model.IColoredBakedQuad
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.property.IExtendedBlockState
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.model.IModel
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.IRenderHandler
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.model.pipeline.LightUtil
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.common.MinecraftForge
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.MinecraftForgeClient
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.fml.common.ModContainer
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.model.ModelLoader$VanillaLoader
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.RenderBlockOverlayEvent$OverlayType
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.RenderItemInFrameEvent
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.RenderLivingEvent$Pre
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.RenderLivingEvent$Post
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.RenderLivingEvent$Specials$Pre
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.client.event.RenderLivingEvent$Specials$Post
+[21:57:08] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: net.minecraftforge.event.world.WorldEvent$Load
+[21:57:08] [Client thread/INFO]: [OptiFine] *** Reloading custom textures ***
+[21:57:08] [Client thread/INFO]: [OptiFine] Enable face culling: acacia_leaves, birch_leaves, dark_oak_leaves, jungle_leaves, oak_leaves, spruce_leaves
+[21:58:24] [Client thread/INFO]: Stopping!
+[21:58:24] [Client thread/INFO]: SoundSystem shutting down...
+[21:58:24] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com

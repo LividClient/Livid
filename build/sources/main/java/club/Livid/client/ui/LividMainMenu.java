@@ -1,5 +1,6 @@
 package club.Livid.client.ui;
 
+import club.Livid.client.utilities.render.RenderUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.GuiButton;
@@ -31,25 +32,11 @@ public class LividMainMenu extends GuiScreen {
         mc.getTextureManager().bindTexture(background);
         Gui.drawModalRectWithCustomSizedTexture(0, 0, 0, 0, sr.getScaledWidth(), sr.getScaledHeight(), sr.getScaledWidth(), sr.getScaledHeight());
         for (LividUIComponent c : components) {
-            GL11.glEnable(GL_BLEND);
-            GL11.glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
             c.setX(sr.getScaledWidth() / 2);
             c.setY(sr.getScaledHeight() / 2);
             c.draw(mouseX, mouseY);
         }
         super.drawScreen(mouseX, mouseY, partialTicks);
-    }
-
-    @Override
-    public void onResize(Minecraft mcIn, int w, int h) {
-        for (LividUIComponent c : components) {
-            if(c instanceof LividMainMenuExpandComponent){
-                ScaledResolution sr = new ScaledResolution(mc);
-                c.setX(sr.getScaledWidth() / 2);
-                c.setY(sr.getScaledHeight() / 2);
-            }
-        }
-        super.onResize(mcIn, w, h);
     }
 
 
@@ -78,10 +65,10 @@ public class LividMainMenu extends GuiScreen {
 
     @Override
     public void initGui() {
+        super.initGui();
         this.components.clear();
         ScaledResolution sr = new ScaledResolution(mc);
         this.components.add(new LividMainMenuExpandComponent(0, sr.getScaledWidth() / 2, sr.getScaledHeight() / 2, null, 30));
-        super.initGui();
     }
 
     @Override
