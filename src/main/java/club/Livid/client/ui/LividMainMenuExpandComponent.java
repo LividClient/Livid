@@ -32,11 +32,11 @@ public class LividMainMenuExpandComponent extends LividUIComponent {
         expanded = !expanded;
         if (expanded && !checkList()) {
             System.out.println("Expand: " + expanded);
-            this.children.add(new LividRoundButton(getX() - 50, getY(), 1, this, new ResourceLocation("Livid/main.png"), 25, LividActions.SINGLEPLAYERMENU));
-            this.children.add(new LividRoundButton(getX() - 50 * 2, getY(), 2, this, new ResourceLocation("Livid/main.png"), 25, LividActions.MULTIPLAYERMENU));
-            this.children.add(new LividRoundButton(getX(), getY(), 3, this, new ResourceLocation("Livid/main.png"), 25, LividActions.SETTINGS));
-            this.children.add(new LividRoundButton(getX() + 50, getY(), 4, this, new ResourceLocation("Livid/main.png"), 25, LividActions.LANGAUGE));
-            this.children.add(new LividRoundButton(getX() + 50 * 2, getY(), 5, this, new ResourceLocation("Livid/main.png"), 25, LividActions.QUIT));
+            this.children.add(new LividRoundButton(getX() - 50, getY(), 1, this, new ResourceLocation("Livid/multiplayer.png"), 25, LividActions.MULTIPLAYERMENU));
+            this.children.add(new LividRoundButton(getX() - 50 * 2, getY(), 2, this, new ResourceLocation("Livid/single.png"), 25, LividActions.SINGLEPLAYERMENU));
+            this.children.add(new LividRoundButton(getX(), getY(), 3, this, new ResourceLocation("Livid/settings.png"), 25, LividActions.SETTINGS));
+            this.children.add(new LividRoundButton(getX() + 50, getY(), 4, this, new ResourceLocation("Livid/language.png"), 25, LividActions.LANGAUGE));
+            this.children.add(new LividRoundButton(getX() + 50 * 2, getY(), 5, this, new ResourceLocation("Livid/exit.png"), 25, LividActions.QUIT));
         }
         for (LividUIComponent c : children) {
             if (c instanceof LividRoundButton) {

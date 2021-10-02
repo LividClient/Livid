@@ -2,7 +2,8 @@
   "mappings": {
     "club/Livid/client/mixin/impl/MixinMinecraft": {
       "createDisplay": "Lave;ap()V",
-      "startGame": "Lave;am()V"
+      "startGame": "Lave;am()V",
+      "displayGuiScreen": "Lave;a(Laxu;)V"
     },
     "club/Livid/client/mixin/impl/MixinGuiIngame": {
       "renderGameOverlay": "Lavo;a(F)V"
@@ -21,7 +22,8 @@
     "notch": {
       "club/Livid/client/mixin/impl/MixinMinecraft": {
         "createDisplay": "Lave;ap()V",
-        "startGame": "Lave;am()V"
+        "startGame": "Lave;am()V",
+        "displayGuiScreen": "Lave;a(Laxu;)V"
       },
       "club/Livid/client/mixin/impl/MixinGuiIngame": {
         "renderGameOverlay": "Lavo;a(F)V"
@@ -39,7 +41,8 @@
     "searge": {
       "club/Livid/client/mixin/impl/MixinMinecraft": {
         "createDisplay": "Lnet/minecraft/client/Minecraft;func_175609_am()V",
-        "startGame": "Lnet/minecraft/client/Minecraft;func_71384_a()V"
+        "startGame": "Lnet/minecraft/client/Minecraft;func_71384_a()V",
+        "displayGuiScreen": "Lnet/minecraft/client/Minecraft;func_147108_a(Lnet/minecraft/client/gui/GuiScreen;)V"
       },
       "club/Livid/client/mixin/impl/MixinGuiIngame": {
         "renderGameOverlay": "Lnet/minecraft/client/gui/GuiIngame;func_175180_a(F)V"

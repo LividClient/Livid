@@ -1020,6 +1020,41 @@ public class Minecraft implements IThreadListener, IPlayerUsage
         {
             this.mcSoundHandler.resumeSounds();
             this.setIngameFocus();
+        }        if (this.currentScreen != null)
+        {
+            this.currentScreen.onGuiClosed();
+        }
+
+        if (guiScreenIn == null && this.theWorld == null)
+        {
+            guiScreenIn = new GuiMainMenu();
+        }
+        else if (guiScreenIn == null && this.thePlayer.getHealth() <= 0.0F)
+        {
+            guiScreenIn = new GuiGameOver();
+        }
+
+        if (guiScreenIn instanceof GuiMainMenu)
+        {
+            this.gameSettings.showDebugProfilerChart = false;
+            this.ingameGUI.getChatGUI().clearChatMessages();
+        }
+
+        this.currentScreen = (GuiScreen)guiScreenIn;
+
+        if (guiScreenIn != null)
+        {
+            this.setIngameNotInFocus();
+            ScaledResolution scaledresolution = new ScaledResolution(this);
+            int i = scaledresolution.getScaledWidth();
+            int j = scaledresolution.getScaledHeight();
+            ((GuiScreen)guiScreenIn).setWorldAndResolution(this, i, j);
+            this.skipRenderWorld = false;
+        }
+        else
+        {
+            this.mcSoundHandler.resumeSounds();
+            this.setIngameFocus();
         }
     }
 

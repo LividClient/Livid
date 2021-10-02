@@ -1,5 +1,6 @@
 package club.Livid.client.mixin.impl;
 
+import club.Livid.client.ui.LividMainMenu;
 import club.Livid.client.utilities.FontRenderer.FontUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
@@ -45,7 +46,7 @@ public class MixinGuiButton {
     @Overwrite
     public void drawButton(Minecraft mc, int mouseX, int mouseY) {
         hovered = (mouseX >= this.xPosition && mouseY >= this.yPosition && mouseX < this.xPosition + this.width && mouseY < this.yPosition + this.height);
-        alpha += ((hovered ? 255 : 0) - alpha) / (4 * (mc.currentScreen instanceof GuiMainMenu ? 1 : 8));
+        alpha += ((hovered ? 255 : 0) - alpha) / (4 * (mc.theWorld == null ? 1 : 8));
         Gui.drawRect(xPosition, yPosition, xPosition + width, yPosition + height, 0xFFFFFFFF);
         Gui.drawRect(xPosition + 1, yPosition + 1, xPosition + width - 1, yPosition + height - 1, new Color((int) alpha, (int) alpha, (int) alpha).getRGB());
         FontUtil.normal.drawCenteredString(displayString, xPosition + width / 2, yPosition + height / 2 - FontUtil.normal.getHeight() / 2, new Color(255 - (int) alpha, 255 - (int) alpha, 255 - (int) alpha).getRGB());
