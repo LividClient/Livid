@@ -18,7 +18,6 @@ public class MixinGuiButton {
 
     @Shadow
     protected static final ResourceLocation buttonTextures = new ResourceLocation("textures/gui/widgets.png");
-
     @Shadow
     protected int width;
     @Shadow

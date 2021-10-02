@@ -1,40 +1,68 @@
 package club.Livid.client.ui;
 
-import club.Livid.client.utilities.FontRenderer.CFont;
 import club.Livid.client.utilities.render.RenderUtil;
-import net.minecraft.client.gui.Gui;
 import net.minecraft.client.renderer.GlStateManager;
-import net.minecraft.client.renderer.texture.DynamicTexture;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 
-import java.awt.*;
-import java.awt.geom.Rectangle2D;
-import java.awt.image.BufferedImage;
-
-import static org.lwjgl.opengl.ARBInternalformatQuery2.GL_TEXTURE_2D_MULTISAMPLE;
-import static org.lwjgl.opengl.ARBTextureMultisample.glTexImage2DMultisample;
 import static org.lwjgl.opengl.GL11.*;
 
 public class LividMainMenuExpandComponent extends LividUIComponent {
 
-    private boolean expanded;
+    public boolean expanded;
     float size;
-
+    int offset = 0;
+    float offsetDifference = 0;
+    int defX;
     /**
      * things
      */
 
     float sizeDifference;
 
-    public LividMainMenuExpandComponent(int id, int x, int y, LividUIComponent parentComponent, float size, LividUIComponent... children) {
-        super(id, x, y, parentComponent, children);
+    public LividMainMenuExpandComponent(float x, float y, int id, LividUIComponent parentComponent, float size, LividUIComponent... children) {
+        super(x, y, id, parentComponent, children);
         this.size = size;
+        this.defX = (int) x;
     }
 
     @Override
     public void action() {
+        offset = (offset == 0 ? 120 : 0);
+        expanded = !expanded;
+        if (expanded && !checkList()) {
+            System.out.println("Expand: " + expanded);
+            this.children.add(new LividRoundButton(getX() - 50, getY(), 1, this, new ResourceLocation("Livid/main.png"), 25, LividActions.SINGLEPLAYERMENU));
+            this.children.add(new LividRoundButton(getX() - 50 * 2, getY(), 2, this, new ResourceLocation("Livid/main.png"), 25, LividActions.MULTIPLAYERMENU));
+            this.children.add(new LividRoundButton(getX(), getY(), 3, this, new ResourceLocation("Livid/main.png"), 25, LividActions.SETTINGS));
+            this.children.add(new LividRoundButton(getX() + 50, getY(), 4, this, new ResourceLocation("Livid/main.png"), 25, LividActions.LANGAUGE));
+            this.children.add(new LividRoundButton(getX() + 50 * 2, getY(), 5, this, new ResourceLocation("Livid/main.png"), 25, LividActions.QUIT));
+        }
+        for (LividUIComponent c : children) {
+            if (c instanceof LividRoundButton) {
+                ((LividRoundButton) c).onMainClick();
+            }
+        }
         super.action();
+    }
+
+    public boolean checkList() {
+        for (LividUIComponent c : children) {
+            if (c != null) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public void mouseClicked(int mouseX, int mouseY, int mouseButton) {
+        for (LividUIComponent c : children) {
+            if (c instanceof LividRoundButton) {
+                c.mouseClicked(mouseX, mouseY, mouseButton);
+            }
+        }
+        super.mouseClicked(mouseX, mouseY, mouseButton);
     }
 
     @Override
@@ -43,18 +71,23 @@ public class LividMainMenuExpandComponent extends LividUIComponent {
     }
 
     public int getDistance(int mouseX, int mouseY) {
-        int distX = mouseX - getX();
-        int distY = mouseY - getY();
+        int distX = (int) (mouseX - getX());
+        int distY = (int) (mouseY - getY());
         distX = Math.abs(distX);
         distY = Math.abs(distY);
         int e = (int) Math.sqrt(distX * distX + distY * distY);
         return e;
     }
 
+    public void updatePositions(int mouseX, int mouseY) {
+        sizeDifference += ((isHovered(mouseX, mouseY) ? 4f : 0f) - sizeDifference) / 4f;
+        offsetDifference += (offset - offsetDifference) / 4f;
+    }
+
     @Override
     public void draw(int mouseX, int mouseY) {
         ResourceLocation r = new ResourceLocation("Livid/main.png");
-        sizeDifference += ((isHovered(mouseX, mouseY) ? 4f : 0f) - sizeDifference) / 4f;
+        setX(defX - offsetDifference);
         GlStateManager.color(1.0f, 1.0f, 1.0f, 1.0f);
         GL11.glEnable(GL_BLEND);
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);

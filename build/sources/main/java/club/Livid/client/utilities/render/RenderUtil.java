@@ -3,11 +3,6 @@ package club.Livid.client.utilities.render;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.WorldRenderer;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
-import org.lwjgl.opengl.GL11;
-
-import static org.lwjgl.opengl.GL11.GL_ONE_MINUS_SRC_ALPHA;
-import static org.lwjgl.opengl.GL11.GL_SRC_ALPHA;
-import static org.lwjgl.opengl.GL13.GL_MULTISAMPLE;
 
 public class RenderUtil {
 
@@ -17,10 +12,10 @@ public class RenderUtil {
         Tessellator tessellator = Tessellator.getInstance();
         WorldRenderer worldrenderer = tessellator.getWorldRenderer();
         worldrenderer.begin(7, DefaultVertexFormats.POSITION_TEX);
-        worldrenderer.pos(x, (double) (y + height), 0.0F).tex((double) (u * f), (double) ((v + (float) height) * f1)).endVertex();
-        worldrenderer.pos((x + width), (double) (y + height), 0.0F).tex((double) ((u + (float) width) * f), (double) ((v + (float) height) * f1)).endVertex();
-        worldrenderer.pos((x + width), (double) y, 0.0F).tex((double) ((u + (float) width) * f), (double) (v * f1)).endVertex();
-        worldrenderer.pos(x, (double) y, 0.0F).tex((double) (u * f), (double) (v * f1)).endVertex();
+        worldrenderer.pos(x, y + height, 0.0F).tex(u * f, (v + height) * f1).endVertex();
+        worldrenderer.pos((x + width), y + height, 0.0F).tex((u + width) * f, (v + height) * f1).endVertex();
+        worldrenderer.pos((x + width), y, 0.0F).tex((u + width) * f, v * f1).endVertex();
+        worldrenderer.pos(x, y, 0.0F).tex(u * f, v * f1).endVertex();
         tessellator.draw();
     }
 

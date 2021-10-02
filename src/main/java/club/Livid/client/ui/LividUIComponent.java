@@ -10,28 +10,28 @@ public class LividUIComponent {
 
     Minecraft mc = Minecraft.getMinecraft();
     private int id;
-    private int x;
-    private int y;
+    private float x;
+    private float y;
     private LividUIComponent parentComponent;
-    public List<LividUIComponent> children;
+    public ArrayList<LividUIComponent> children;
 
-    public LividUIComponent(int x, int y, int id) {
+    public LividUIComponent(float x, float y, int id) {
         this.id = id;
         this.x = x;
         this.y = y;
     }
 
-    public LividUIComponent(int x, int y, int id, LividUIComponent parentComponent) {
+    public LividUIComponent(float x, float y, int id, LividUIComponent parentComponent) {
         this.id = id;
         this.parentComponent = parentComponent;
         this.x = x;
         this.y = y;
     }
 
-    public LividUIComponent(int x, int y, int id, LividUIComponent parentComponent, LividUIComponent... children) {
+    public LividUIComponent(float x, float y, int id, LividUIComponent parentComponent, LividUIComponent... children) {
         this.id = id;
         this.parentComponent = parentComponent;
-        this.children = Arrays.asList(children);
+        this.children = new ArrayList<LividUIComponent>(Arrays.asList(children));
         this.x = x;
         this.y = y;
     }
@@ -70,27 +70,27 @@ public class LividUIComponent {
         this.id = id;
     }
 
-    public int getX() {
+    public float getX() {
         return x;
     }
 
-    public void setX(int x) {
+    public void setX(float x) {
         this.x = x;
     }
 
-    public int getY() {
+    public float getY() {
         return y;
     }
 
-    public void setY(int y) {
+    public void setY(float y) {
         this.y = y;
     }
 
-    public List<LividUIComponent> getChildren() {
+    public ArrayList<LividUIComponent> getChildren() {
         return children;
     }
 
-    public void setChildren(List<LividUIComponent> children) {
+    public void setChildren(ArrayList<LividUIComponent> children) {
         this.children = children;
     }
 }
