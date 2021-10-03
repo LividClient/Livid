@@ -14,6 +14,9 @@
     "club/Livid/client/mixin/impl/MixinEntityPlayerSP": {
       "onUpdate": "Lbew;t_()V"
     },
+    "club/Livid/client/mixin/impl/MixinKeyBinding": {
+      "onTick": "Lavb;a(I)V"
+    },
     "club/Livid/client/mixin/impl/MixinGuiMainMenu": {
       "drawScreen": "Laya;a(IIF)V"
     }
@@ -34,6 +37,9 @@
       "club/Livid/client/mixin/impl/MixinEntityPlayerSP": {
         "onUpdate": "Lbew;t_()V"
       },
+      "club/Livid/client/mixin/impl/MixinKeyBinding": {
+        "onTick": "Lavb;a(I)V"
+      },
       "club/Livid/client/mixin/impl/MixinGuiMainMenu": {
         "drawScreen": "Laya;a(IIF)V"
       }
@@ -52,6 +58,9 @@
       },
       "club/Livid/client/mixin/impl/MixinEntityPlayerSP": {
         "onUpdate": "Lnet/minecraft/client/entity/EntityPlayerSP;func_70071_h_()V"
+      },
+      "club/Livid/client/mixin/impl/MixinKeyBinding": {
+        "onTick": "Lnet/minecraft/client/settings/KeyBinding;func_74507_a(I)V"
       },
       "club/Livid/client/mixin/impl/MixinGuiMainMenu": {
         "drawScreen": "Lnet/minecraft/client/gui/GuiMainMenu;func_73863_a(IIF)V"

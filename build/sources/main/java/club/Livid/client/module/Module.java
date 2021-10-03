@@ -1,9 +1,11 @@
 package club.Livid.client.module;
 
-import javafx.scene.Parent;
+import club.Livid.client.event.EventManager;
+import net.minecraft.client.Minecraft;
 
 public class Module {
 
+    protected Minecraft mc = Minecraft.getMinecraft();
     private String name;
     private boolean enabled;
     private String documentation;
@@ -13,7 +15,7 @@ public class Module {
         this.name = name;
         this.documentation = description;
         this.aliases = new String[32];
-        for (int i = 0; i < 31; i++) {
+        for (int i = 0; i < aliases.length - 1; i++) {
             String string = aliases[i];
             this.aliases[i] = string;
         }
@@ -30,8 +32,10 @@ public class Module {
     public void toggle() {
         this.setEnabled(!isEnabled());
         if (this.isEnabled()) {
+            EventManager.register(this);
             onEnable();
         } else {
+            EventManager.unregister(this);
             onDisable();
         }
     }
@@ -50,6 +54,11 @@ public class Module {
 
     public void setEnabled(boolean enabled) {
         this.enabled = enabled;
+        if (enabled) {
+            EventManager.register(this);
+        } else {
+            EventManager.unregister(this);
+        }
     }
 
     public String getDocumentation() {

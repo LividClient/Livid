@@ -21,7 +21,6 @@ public class LividMainMenu extends GuiScreen {
 
     @Override
     public void drawScreen(int mouseX, int mouseY, float partialTicks) {
-        System.out.println("Update " + System.currentTimeMillis());
         ScaledResolution sr = new ScaledResolution(mc);
         mc.getTextureManager().bindTexture(background);
         Gui.drawModalRectWithCustomSizedTexture(0, 0, 0, 0, sr.getScaledWidth(), sr.getScaledHeight(), sr.getScaledWidth(), sr.getScaledHeight());

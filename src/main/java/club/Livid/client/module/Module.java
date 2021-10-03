@@ -15,7 +15,7 @@ public class Module {
         this.name = name;
         this.documentation = description;
         this.aliases = new String[32];
-        for (int i = 0; i < 31; i++) {
+        for (int i = 0; i < aliases.length - 1; i++) {
             String string = aliases[i];
             this.aliases[i] = string;
         }

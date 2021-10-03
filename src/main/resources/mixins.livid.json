@@ -11,6 +11,7 @@
     "MixinGuiIngame",
     "MixinFontRenderer",
     "MixinGuiButton",
-    "MixinEntityPlayerSP"
+    "MixinEntityPlayerSP",
+    "MixinKeyBinding"
   ]
 }
