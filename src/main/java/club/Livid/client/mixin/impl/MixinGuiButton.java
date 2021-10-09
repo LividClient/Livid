@@ -1,13 +1,10 @@
 package club.Livid.client.mixin.impl;
 
-import club.Livid.client.ui.LividMainMenu;
 import club.Livid.client.utilities.FontRenderer.FontUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.GuiButton;
-import net.minecraft.client.gui.GuiMainMenu;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.Timer;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;

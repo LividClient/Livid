@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MinecraftFontRenderer extends CFont {
+
     CFont.CharData[] boldChars = new CFont.CharData[256],
             italicChars = new CFont.CharData[256],
             boldItalicChars = new CFont.CharData[256];
@@ -41,8 +42,13 @@ public class MinecraftFontRenderer extends CFont {
         return (int) this.drawNoBSString(text, x2, y2, color, false);
     }
 
+    //x2 - (float) (this.getStringWidth(text) / 2)
     public int drawSmoothString(String text, double x2, float y2, int color) {
         return (int) this.drawSmoothString(text, x2, y2, color, false);
+    }
+
+    public int drawSmoothStringCentered(String text, double x2, float y2, int color) {
+        return (int) this.drawSmoothString(text, x2 - (float) (this.getStringWidth(text) / 2), y2, color, false);
     }
 
     public double getPasswordWidth(String text) {
@@ -91,14 +97,14 @@ public class MinecraftFontRenderer extends CFont {
         x *= 2;
         y = (y - 3) * 2;
         GL11.glPushMatrix();
-        GlStateManager.scale(0.5, 0.5, 0.5);
+        GlStateManager.scale(0.5, 0.5, 0.5f);
         GlStateManager.enableBlend();
         GlStateManager.blendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
+        GlStateManager.alphaFunc(516, 0.003921569F);
         GlStateManager.color((float) (color >> 16 & 255) / 255f, (float) (color >> 8 & 255) / 255f, (float) (color & 255) / 255f, alpha);
         GlStateManager.enableTexture2D();
         GlStateManager.bindTexture(this.tex.getGlTextureId());
         GL11.glBindTexture(GL11.GL_TEXTURE_2D, this.tex.getGlTextureId());
-
         for (int index = 0; index < text.length(); index++) {
             char character = text.charAt(index);
 
@@ -212,6 +218,7 @@ public class MinecraftFontRenderer extends CFont {
         GlStateManager.scale(0.5, 0.5, 0.5);
         GlStateManager.enableBlend();
         GlStateManager.blendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
+        GlStateManager.alphaFunc(516, 0.003921569F);
         GlStateManager.color((float) (color >> 16 & 255) / 255f, (float) (color >> 8 & 255) / 255f, (float) (color & 255) / 255f, alpha);
         GlStateManager.enableTexture2D();
         GlStateManager.bindTexture(this.tex.getGlTextureId());

@@ -900,8 +900,8 @@ public class GameSettings
                             if (astring[0].equals("saturation"))
                             {
                                 this.guiScale = this.parseFloat(astring[1]);
-                            }
 
+                        }
                             if (astring[0].equals("invertYMouse"))
                             {
                                 this.invertMouse = astring[1].equals("true");

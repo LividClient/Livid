@@ -32,4 +32,13 @@ public class ModuleManager {
     public void register(Module m) {
         getModuleRegistry().add(m);
     }
+
+    public Module getModule(Class clazz) {
+        for (Module m : this.moduleRegistry) {
+            if (m.getClass() == clazz) {
+                return m;
+            }
+        }
+        return null;
+    }
 }

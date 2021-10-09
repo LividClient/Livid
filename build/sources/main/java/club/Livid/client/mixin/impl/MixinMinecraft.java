@@ -1,7 +1,8 @@
 package club.Livid.client.mixin.impl;
 
 import club.Livid.client.Livid;
-import club.Livid.client.ui.LividMainMenu;
+import club.Livid.client.ui.AnimatedGuiScreen;
+import club.Livid.client.ui.mainMenu.LividMainMenu;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGameOver;
 import net.minecraft.client.gui.GuiMainMenu;
@@ -30,9 +31,16 @@ public class MixinMinecraft {
 
     @Inject(method = "displayGuiScreen", at = @At("TAIL"))
     public void displayGuiScreen(GuiScreen guiScreenIn, CallbackInfo ci) {
+        Minecraft mc = Minecraft.getMinecraft();
+        if (mc.currentScreen != null)
+        {
+            if(Livid.instance.lastGui instanceof AnimatedGuiScreen){
+                AnimatedGuiScreen animatedGuiScreen = (AnimatedGuiScreen) Livid.instance.lastGui;
+                animatedGuiScreen.isEnding = true;
+            }
+        }
         if (guiScreenIn instanceof GuiMainMenu) {
             guiScreenIn = new LividMainMenu();
-            Minecraft mc = Minecraft.getMinecraft();
 
             if (mc.currentScreen != null) {
                 mc.currentScreen.onGuiClosed();

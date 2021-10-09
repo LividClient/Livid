@@ -6,7 +6,7 @@ Description: Initializing game
 
 java.lang.NullPointerException: Initializing game
 	at net.minecraft.client.gui.ScaledResolution.<init>(ScaledResolution.java:16)
-	at club.Livid.client.ui.LividMainMenu.<init>(LividMainMenu.java:22)
+	at club.Livid.client.ui.mainMenu.LividMainMenu.<init>(LividMainMenu.java:22)
 	at net.minecraft.client.Minecraft.handler$startGame$zza000(Minecraft.java:3396)
 	at net.minecraft.client.Minecraft.startGame(Minecraft.java:600)
 	at net.minecraft.client.Minecraft.run(Minecraft.java:406)
@@ -31,7 +31,7 @@ A detailed walkthrough of the error, its code path and all known details is as f
 -- Head --
 Stacktrace:
 	at net.minecraft.client.gui.ScaledResolution.<init>(ScaledResolution.java:16)
-	at club.Livid.client.ui.LividMainMenu.<init>(LividMainMenu.java:22)
+	at club.Livid.client.ui.mainMenu.LividMainMenu.<init>(LividMainMenu.java:22)
 	at net.minecraft.client.Minecraft.handler$startGame$zza000(Minecraft.java:3396)
 	at net.minecraft.client.Minecraft.startGame(Minecraft.java:600)
 

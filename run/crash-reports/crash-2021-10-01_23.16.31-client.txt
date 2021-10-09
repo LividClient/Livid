@@ -7,9 +7,9 @@ Description: Updating screen events
 java.lang.UnsupportedOperationException
 	at java.util.AbstractList.add(AbstractList.java:148)
 	at java.util.AbstractList.add(AbstractList.java:108)
-	at club.Livid.client.ui.LividMainMenuExpandComponent.action(LividMainMenuExpandComponent.java:43)
-	at club.Livid.client.ui.LividUIComponent.mouseClicked(LividUIComponent.java:41)
-	at club.Livid.client.ui.LividMainMenu.mouseClicked(LividMainMenu.java:67)
+	at club.Livid.client.ui.components.LividMainMenuExpandComponent.action(LividMainMenuExpandComponent.java:43)
+	at club.Livid.client.ui.components.LividUIComponent.mouseClicked(LividUIComponent.java:41)
+	at club.Livid.client.ui.mainMenu.LividMainMenu.mouseClicked(LividMainMenu.java:67)
 	at net.minecraft.client.gui.GuiScreen.handleMouseInput(GuiScreen.java:613)
 	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:582)
 	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1796)
@@ -37,15 +37,15 @@ A detailed walkthrough of the error, its code path and all known details is as f
 Stacktrace:
 	at java.util.AbstractList.add(AbstractList.java:148)
 	at java.util.AbstractList.add(AbstractList.java:108)
-	at club.Livid.client.ui.LividMainMenuExpandComponent.action(LividMainMenuExpandComponent.java:43)
-	at club.Livid.client.ui.LividUIComponent.mouseClicked(LividUIComponent.java:41)
-	at club.Livid.client.ui.LividMainMenu.mouseClicked(LividMainMenu.java:67)
+	at club.Livid.client.ui.components.LividMainMenuExpandComponent.action(LividMainMenuExpandComponent.java:43)
+	at club.Livid.client.ui.components.LividUIComponent.mouseClicked(LividUIComponent.java:41)
+	at club.Livid.client.ui.mainMenu.LividMainMenu.mouseClicked(LividMainMenu.java:67)
 	at net.minecraft.client.gui.GuiScreen.handleMouseInput(GuiScreen.java:613)
 	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:582)
 
 -- Affected screen --
 Details:
-	Screen name: club.Livid.client.ui.LividMainMenu
+	Screen name: club.Livid.client.ui.mainMenu.LividMainMenu
 Stacktrace:
 	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1796)
 	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1120)

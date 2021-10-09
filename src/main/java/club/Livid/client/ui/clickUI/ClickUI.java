@@ -1,24 +1,33 @@
 package club.Livid.client.ui.clickUI;
 
-import net.minecraft.client.gui.GuiScreen;
-import net.minecraft.client.renderer.GlStateManager;
-import net.minecraft.client.renderer.Tessellator;
-import net.minecraft.client.renderer.WorldRenderer;
-import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
-import org.lwjgl.opengl.GL11;
+import club.Livid.client.Livid;
+import club.Livid.client.ui.AnimatedGuiScreen;
+import club.Livid.client.utilities.FontRenderer.FontUtil;
+import club.Livid.client.utilities.render.RenderUtil;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.Gui;
+import net.minecraft.client.gui.ScaledResolution;
 
 import java.awt.*;
 import java.io.IOException;
 
-public class ClickUI extends GuiScreen {
+public class ClickUI extends AnimatedGuiScreen {
 
-    float animationA = 0f;
-    float animationI = 0f;
+    public ScaledResolution sr = new ScaledResolution(Minecraft.getMinecraft());
+    public int LEFT = 150;
+    public int RIGHT = sr.getScaledWidth() - LEFT;
+    public int TOP = 100;
+    public int BOTTOM = sr.getScaledHeight() - TOP;
 
     @Override
-    public void drawScreen(int mouseX, int mouseY, float partialTicks) {
-
-        super.drawScreen(mouseX, mouseY, partialTicks);
+    public void customDrawScreen(int mouseX, int mouseY, float partialTicks) {
+        sr = new ScaledResolution(Minecraft.getMinecraft());
+        Color converter = new Color(0x363636);
+        Color textColor = new Color(0x73A0FF);
+        Color color = new Color(converter.getRed(), converter.getGreen(), converter.getBlue(), (int)Math.min(255, 255 * animationA));
+        RenderUtil.drawShadedRoundedRect(LEFT, TOP, RIGHT, BOTTOM, 7, 10, color.getRGB());
+        Gui.drawRect(LEFT + 5, TOP + 5, RIGHT - 5, BOTTOM - 5, color.getRGB());
+        FontUtil.large.drawString(Livid.instance.CLIENT_NAME, LEFT + 10, TOP + 10, textColor.getRGB());
     }
 
     @Override

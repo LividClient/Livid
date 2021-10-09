@@ -1,5 +1,6 @@
 package net.minecraft.client;
 
+import club.Livid.client.ui.AnimatedGuiScreen;
 import com.google.common.collect.Iterables;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;

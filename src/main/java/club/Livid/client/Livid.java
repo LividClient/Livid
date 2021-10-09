@@ -9,6 +9,10 @@ import club.Livid.client.utilities.FontRenderer.FontUtil;
 import club.Livid.client.utilities.file.FileManager;
 import club.Livid.client.value.ValueManager;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiScreen;
+import net.minecraft.client.gui.ScaledResolution;
+import net.minecraft.util.ChatComponentText;
+import net.minecraft.util.EnumChatFormatting;
 import org.lwjgl.input.Keyboard;
 
 public enum Livid {
@@ -20,6 +24,8 @@ public enum Livid {
     public FileManager fileManager;
     public ModuleManager moduleManager;
     public ValueManager valueManager;
+    public GuiScreen lastGui = null;
+    public float lastGuiScale;
 
     public void init() {
         fileManager = new FileManager();
@@ -27,50 +33,33 @@ public enum Livid {
         valueManager = new ValueManager();
         FontUtil.bootstrap();
         EventManager.register(this);
+        lastGuiScale = new ScaledResolution(Minecraft.getMinecraft()).getScaleFactor();
     }
 
     public String getCLIENT_NAME() {
         return CLIENT_NAME;
     }
 
-    public void setCLIENT_NAME(String CLIENT_NAME) {
-        this.CLIENT_NAME = CLIENT_NAME;
-    }
-
     public String getCLIENT_VERSION() {
         return CLIENT_VERSION;
-    }
-
-    public void setCLIENT_VERSION(String CLIENT_VERSION) {
-        this.CLIENT_VERSION = CLIENT_VERSION;
     }
 
     public FileManager getFileManager() {
         return fileManager;
     }
 
-    public void setFileManager(FileManager fileManager) {
-        this.fileManager = fileManager;
-    }
-
     public ModuleManager getModuleManager() {
         return moduleManager;
     }
 
-    public void setModuleManager(ModuleManager moduleManager) {
-        this.moduleManager = moduleManager;
-    }
-
     public void log(String s) {
         System.out.println("[Livid LOGS]: " + s);
+        if(Minecraft.getMinecraft().theWorld != null)
+            Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText(EnumChatFormatting.LIGHT_PURPLE + "[Livid] (!) -> " + s));
     }
 
     public ValueManager getValueManager() {
         return valueManager;
-    }
-
-    public void setValueManager(ValueManager valueManager) {
-        this.valueManager = valueManager;
     }
 
     @Subscribe
@@ -79,4 +68,5 @@ public enum Livid {
             Minecraft.getMinecraft().displayGuiScreen(new ClickUI());
         }
     }
+
 }

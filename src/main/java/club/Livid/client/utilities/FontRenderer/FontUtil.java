@@ -2,7 +2,7 @@ package club.Livid.client.utilities.FontRenderer;
 
 import club.Livid.client.Livid;
 import net.minecraft.client.Minecraft;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.client.gui.ScaledResolution;
 
 import java.awt.*;
 import java.io.File;
@@ -15,7 +15,8 @@ import java.util.Map;
 public class FontUtil {
     public static volatile int completed;
     public static MinecraftFontRenderer normal;
-    private static Font normal_;
+    public static MinecraftFontRenderer large;
+
 
     public static Font getFont(Map<String, Font> locationMap, String location, int size) {
         Font font = null;
@@ -38,37 +39,12 @@ public class FontUtil {
         return font;
     }
 
-    public static boolean hasLoaded() {
-        return completed >= 3;
-    }
-
     public static void bootstrap() {
-        new Thread(() ->
-        {
-            Map<String, Font> locationMap = new HashMap<>();
-            normal_ = getFont(locationMap, "ProductSansLight.ttf", 20);
-            completed++;
-        }).start();
-        new Thread(() ->
-        {
-            Map<String, Font> locationMap = new HashMap<>();
-            completed++;
-        }).start();
-        new Thread(() ->
-        {
-            Map<String, Font> locationMap = new HashMap<>();
-            completed++;
-        }).start();
-
-        while (!hasLoaded()) {
-            try {
-                //noinspection BusyWait
-                Thread.sleep(5);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-
+        Livid.instance.log("Fonts Reloaded");
+        Map<String, Font> locationMap = new HashMap<>();
+        Font normal_ = getFont(locationMap, "ProductSansLight.ttf", 20);
+        Font large_ = getFont(locationMap, "ProductSansLight.ttf", 40);
         normal = new MinecraftFontRenderer(normal_, true, true);
+        large = new MinecraftFontRenderer(large_, true, true);
     }
 }
