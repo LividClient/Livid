@@ -9,7 +9,7 @@ public class ResourceLocation
 
     protected ResourceLocation(int p_i45928_1_, String... resourceName)
     {
-        this.resourceDomain = org.apache.commons.lang3.StringUtils.isEmpty(resourceName[0]) ? "minecraft" : resourceName[0].toLowerCase();
+        this.resourceDomain = org.apache.commons.lang3.StringUtils.isEmpty(resourceName[0]) ? "assets/minecraft" : resourceName[0].toLowerCase();
         this.resourcePath = resourceName[1];
         Validate.notNull(this.resourcePath);
     }

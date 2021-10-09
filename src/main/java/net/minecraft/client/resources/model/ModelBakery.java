@@ -829,7 +829,7 @@ public class ModelBakery
     {
         if (p_fixModelLocation_0_ != null && p_fixModelLocation_1_ != null)
         {
-            if (!p_fixModelLocation_0_.getResourceDomain().equals("minecraft"))
+            if (!p_fixModelLocation_0_.getResourceDomain().equals("assets/minecraft"))
             {
                 return p_fixModelLocation_0_;
             }

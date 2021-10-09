@@ -530,7 +530,7 @@ public class CustomColors
 
             try
             {
-                ResourceLocation resourcelocation = new ResourceLocation("minecraft", s);
+                ResourceLocation resourcelocation = new ResourceLocation("assets/minecraft", s);
                 InputStream inputstream = Config.getResourceStream(resourcelocation);
 
                 if (inputstream == null)

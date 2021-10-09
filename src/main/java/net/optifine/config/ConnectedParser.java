@@ -143,7 +143,7 @@ public class ConnectedParser
             else
             {
                 String[] astring = Config.tokenize(blockStr, ":");
-                String s = "minecraft";
+                String s = "assets/minecraft";
                 int i = 0;
 
                 if (astring.length > 1 && this.isFullBlockName(astring))
@@ -153,7 +153,7 @@ public class ConnectedParser
                 }
                 else
                 {
-                    s = "minecraft";
+                    s = "assets/minecraft";
                     i = 0;
                 }
 

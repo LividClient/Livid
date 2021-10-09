@@ -234,7 +234,7 @@ public abstract class LayerArmorBase<T extends ModelBase> implements LayerRender
     {
         ItemArmor itemarmor = (ItemArmor)p_getArmorResource_2_.getItem();
         String s = itemarmor.getArmorMaterial().getName();
-        String s1 = "minecraft";
+        String s1 = "assets/minecraft";
         int i = s.indexOf(58);
 
         if (i != -1)

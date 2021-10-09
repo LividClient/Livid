@@ -54,7 +54,7 @@ public class CustomGuis
             {
                 return loc;
             }
-            else if (loc.getResourceDomain().equals("minecraft") && loc.getResourcePath().startsWith("textures/gui/"))
+            else if (loc.getResourceDomain().equals("assets/minecraft") && loc.getResourcePath().startsWith("textures/gui/"))
             {
                 if (playerControllerOF == null)
                 {

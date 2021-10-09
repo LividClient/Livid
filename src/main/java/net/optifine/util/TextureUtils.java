@@ -329,7 +329,7 @@ public class TextureUtils
 
     public static ResourceLocation fixResourceLocation(ResourceLocation loc, String basePath)
     {
-        if (!loc.getResourceDomain().equals("minecraft"))
+        if (!loc.getResourceDomain().equals("assets/minecraft"))
         {
             return loc;
         }
