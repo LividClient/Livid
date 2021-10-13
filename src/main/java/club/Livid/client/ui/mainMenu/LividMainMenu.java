@@ -17,7 +17,7 @@ import java.util.ArrayList;
 public class LividMainMenu extends GuiScreen {
 
 
-    private final ResourceLocation background = new ResourceLocation("Livid/bg.png");
+    private final ResourceLocation background = new ResourceLocation("livid/textures/bg.png");
 
     private ArrayList<LividUIComponent> components = new ArrayList<>();
 

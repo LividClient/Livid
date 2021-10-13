@@ -86,7 +86,7 @@ public class LividMainMenuExpandComponent extends LividUIComponent {
 
     @Override
     public void draw(int mouseX, int mouseY) {
-        ResourceLocation r = new ResourceLocation("Livid/main.png");
+        ResourceLocation r = new ResourceLocation("livid/textures/main.png");
         setX(defX - offsetDifference);
         GlStateManager.color(1.0f, 1.0f, 1.0f, 1.0f);
         GL11.glEnable(GL_BLEND);
